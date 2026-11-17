@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boom-filter-slackbots"
+version = "0.1.0"
+description = "Slack bots for transient filters on BOOM/Babamul LSST alerts"
+requires-python = ">=3.10"
+dependencies = [
+    "antares-filter-slackbots @ git+https://github.com/VTDA-Group/antares-filter-slackbots.git",
+    "pandas",
+    "numpy",
+    "astropy",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
